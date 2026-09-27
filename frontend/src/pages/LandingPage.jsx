@@ -1,89 +1,88 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { Canvas } from "@react-three/fiber";
+import { Stars, OrbitControls } from "@react-three/drei";
+import { motion } from "framer-motion";
 import {
-Canvas
-} from "@react-three/fiber";
-
-import {
-Stars,
-OrbitControls
-} from "@react-three/drei";
-
-
-import {
-motion
-} from "framer-motion";
-
-
-import {
-Link
-} from "react-router-dom";
-
-
-import {
-ArrowRight
+  ArrowRight,
+  FileText,
+  Brain,
+  ShieldCheck,
+  Sparkles
 } from "lucide-react";
 
-
 import NeuralGraph from "../components/three/NeuralGraph";
-
-
+import useReveal from "../hooks/useReveal";
 import "./LandingPage.css";
-
-
 
 
 export default function LandingPage(){
 
+useReveal();
 
 return (
 
-<div className="landing">
+<div className="ss-landing">
 
 
-<nav className="nav">
+{/* NAVBAR */}
+
+<nav className="ss-nav">
 
 
-<div className="logo">
+<div className="ss-logo">
 
-<div className="logo-mark">
+<div className="ss-logo-icon">
 ✦
 </div>
 
-SkillSprint
 <span>
-AI
+SkillSprint
+<b>AI</b>
 </span>
 
 </div>
 
 
 
-<div className="links">
+<div className="ss-nav-links">
 
-<a>Product</a>
-<a>Features</a>
-<a>Validation</a>
-<a>About</a>
+<a href="#process">
+Process
+</a>
+
+<a href="#ai">
+AI Engine
+</a>
+
+<a href="#validation">
+Validation
+</a>
+
+<a href="#features">
+Features
+</a>
+
 
 </div>
 
 
 
-<div className="nav-buttons">
+<div className="ss-nav-actions">
 
-<Link to="/login">
+<Link
+to="/login"
+className="login-btn"
+>
 Login
 </Link>
 
 
 <Link
-className="nav-cta"
 to="/login"
+className="try-btn"
 >
-
 Try Now
-
 </Link>
 
 
@@ -96,39 +95,37 @@ Try Now
 
 
 
-<section className="hero">
 
 
-<div className="hero-copy">
+{/* HERO */}
 
 
-<motion.span
+<section className="ss-hero">
 
-initial={{opacity:0}}
 
-animate={{opacity:1}}
+<div className="ss-hero-content reveal">
 
->
+
+<div className="ss-badge">
+
+<Sparkles size={14}/>
 
 GENERATIVE AI POWERED
 
-</motion.span>
-
+</div>
 
 
 
 <h1>
 
-Turn company
+Transform company
 <br/>
 
 knowledge into
 <br/>
 
 <span>
-
 intelligent onboarding
-
 </span>
 
 </h1>
@@ -137,32 +134,35 @@ intelligent onboarding
 
 <p>
 
-SkillSprint AI analyzes policies,
-SOPs, role documents and creates
-personalized employee learning journeys.
+SkillSprint AI analyzes company
+documents, policies, SOPs and
+role requirements to create
+personalized employee learning
+experiences.
 
 </p>
 
 
 
-<div className="hero-actions">
+<div className="ss-actions">
 
 
 <Link
 to="/login"
-className="primary"
+className="main-btn"
 >
 
 Start Building
 
-<ArrowRight/>
+<ArrowRight size={18}/>
 
 </Link>
 
 
+
 <Link
 to="/login"
-className="outline"
+className="border-btn"
 >
 
 Login
@@ -173,19 +173,27 @@ Login
 </div>
 
 
-
 </div>
 
 
 
 
 
-<div className="webgl">
+
+<div className="ss-webgl">
 
 
-<Canvas>
+<Canvas
+camera={{
+position:[0,0,5]
+}}
+>
 
-<ambientLight intensity={1}/>
+
+<ambientLight
+intensity={1}
+/>
+
 
 <pointLight
 position={[3,3,3]}
@@ -197,8 +205,10 @@ color="#2dd4c5"
 
 
 <Stars
-count={3000}
-radius={30}
+radius={50}
+depth={30}
+count={4000}
+factor={3}
 />
 
 
@@ -210,11 +220,15 @@ enableZoom={false}
 </Canvas>
 
 
-</div>
-<div className="floating-card card-one">
+
+{/* FLOATING UI */}
+
+
+<div className="float-card document-card">
+
 
 <span>
-DOCUMENT
+SOURCE
 </span>
 
 Company Policy.pdf
@@ -222,7 +236,10 @@ Company Policy.pdf
 </div>
 
 
-<div className="floating-card card-two">
+
+
+<div className="float-card ai-card">
+
 
 <span>
 AI GENERATED
@@ -233,15 +250,24 @@ Learning Plan
 </div>
 
 
-<div className="floating-card card-three">
+
+
+<div className="float-card verify-card">
+
 
 <span>
-VERIFIED
+STATUS
 </span>
 
-100% Coverage
+✓ Verified
 
 </div>
+
+
+
+</div>
+
+
 
 </section>
 
@@ -251,53 +277,121 @@ VERIFIED
 
 
 
-<section className="steps">
 
 
-<div>
+{/* PROCESS SECTION */}
+
+
+
+<section
+id="process"
+className="ss-process reveal"
+>
+
+
+<div className="section-heading">
+
+
+<p>
+HOW IT WORKS
+</p>
+
+
+<h2>
+
+From documents
+to intelligent learning
+
+</h2>
+
+
+</div>
+
+
+
+
+<div className="process-grid">
+
+
+<div className="process-item">
+
+
+<FileText/>
+
 
 <h3>
 01. Upload
 </h3>
 
+
 <p>
-Company policies, SOPs,
-FAQs and role documents.
+
+Upload policies,
+SOPs, FAQs and
+company documents.
+
 </p>
+
 
 </div>
 
 
 
-<div>
+
+
+<div className="process-item">
+
+
+<Brain/>
+
 
 <h3>
 02. Generate
 </h3>
 
+
 <p>
-AI creates personalized
-learning modules and tasks.
+
+AI creates role based
+learning modules,
+tasks and assessments.
+
 </p>
+
 
 </div>
 
 
 
 
-<div>
+
+
+
+<div className="process-item">
+
+
+<ShieldCheck/>
+
 
 <h3>
 03. Validate
 </h3>
 
+
 <p>
-Python validates coverage,
+
+Python validation checks
+requirements,
 sources and accuracy.
+
 </p>
 
+
 </div>
 
+
+
+</div>
 
 
 </section>
@@ -308,33 +402,116 @@ sources and accuracy.
 
 
 
-<section className="big-section">
+
+
+{/* AI EXPERIENCE */}
+
+
+
+<section
+id="ai"
+className="ss-ai-section reveal"
+>
+
+
+<div className="ai-copy">
+
+
+<p>
+PERSONALIZED LEARNING
+</p>
 
 
 <h2>
 
-Your onboarding,
-finally intelligent
+Every employee gets
+a smarter learning path
 
 </h2>
 
 
-<div className="graph-box">
+
+<span>
+
+Based on role, department,
+experience level and company
+requirements.
+
+</span>
+
+
+
+<div className="tags">
+
 
 <div>
+Learning Modules
+</div>
+
+
+<div>
+Practical Tasks
+</div>
+
+
+<div>
+Quizzes
+</div>
+
+
+<div>
+Progress Tracking
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div className="ai-dashboard">
+
+
+<div>
+
 Employee Profile
+
+<strong>
+Finance Officer
+</strong>
+
 </div>
+
 
 <div>
-AI Learning Plan
+
+Generated Plan
+
+<strong>
+90 Day Journey
+</strong>
+
 </div>
+
 
 <div>
-Validation Result
+
+Coverage
+
+<strong>
+100% Verified
+</strong>
+
 </div>
 
 
 </div>
+
 
 
 </section>
@@ -344,20 +521,118 @@ Validation Result
 
 
 
-<section className="cta">
+
+
+
+{/* VALIDATION */}
+
+
+
+<section
+id="validation"
+className="validation-section reveal"
+>
+
+
+<div className="validation-core">
+
+<ShieldCheck size={70}/>
+
+</div>
+
 
 
 <h2>
 
-Build smarter learning
-experiences.
+Generative AI
+<br/>
+
++
+<br/>
+
+Python Validation
 
 </h2>
 
 
-<Link to="/login">
+
+<p>
+
+Ensure every generated learning plan
+is traceable, complete and aligned
+with company requirements.
+
+</p>
+
+
+
+<div className="validation-list">
+
+
+<span>
+Requirement Coverage
+</span>
+
+
+<span>
+Source Traceability
+</span>
+
+
+<span>
+Conflict Detection
+</span>
+
+
+<span>
+Quality Verification
+</span>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+{/* CTA */}
+
+
+
+<section className="ss-final reveal">
+
+
+<h2>
+
+Build the future of
+employee onboarding.
+
+</h2>
+
+
+<p>
+
+SkillSprint AI turns company knowledge
+into actionable learning experiences.
+
+</p>
+
+
+<Link
+to="/login"
+>
 
 Get Started
+
+<ArrowRight size={18}/>
 
 </Link>
 
@@ -366,9 +641,11 @@ Get Started
 
 
 
+
+
 </div>
 
+);
 
-)
 
 }

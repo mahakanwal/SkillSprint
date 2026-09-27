@@ -1,54 +1,80 @@
 import { useEffect } from "react";
+
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import {
+ScrollTrigger
+}
+from "gsap/ScrollTrigger";
 
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(
+ScrollTrigger
+);
 
 
-export default function useGsapReveal(){
+
+export default function useReveal(){
 
 
 useEffect(()=>{
 
 
-const elements =
+const items =
 document.querySelectorAll(
 ".reveal"
 );
 
 
 
-elements.forEach((el)=>{
+items.forEach((item)=>{
 
 
 gsap.fromTo(
-el,
+
+item,
+
 
 {
+
 opacity:0,
+
 y:80,
-filter:"blur(15px)"
+
+filter:"blur(20px)"
+
 },
+
 
 {
 
 opacity:1,
+
 y:0,
+
 filter:"blur(0px)",
 
-duration:1.2,
+
+duration:1,
+
 
 ease:"power3.out",
 
+
 scrollTrigger:{
-trigger:el,
-start:"top 80%",
+
+trigger:item,
+
+start:"top 85%",
+
 toggleActions:
 "play none none reverse"
-}
 
 }
+
+
+}
+
 
 );
 
@@ -65,7 +91,6 @@ ScrollTrigger.killAll();
 
 
 },[]);
-
 
 
 }

@@ -1,6 +1,6 @@
 import React, { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Line, Points } from "@react-three/drei";
+import { Points, PointMaterial, Line } from "@react-three/drei";
 
 
 export default function NeuralGraph(){
@@ -8,42 +8,57 @@ export default function NeuralGraph(){
 const group = useRef();
 
 
-const particles = useMemo(()=>{
+const points = useMemo(()=>{
 
-let data=[];
+const arr=[];
 
-for(let i=0;i<260;i++){
+for(let i=0;i<250;i++){
 
-let t=i/260*Math.PI*6;
+const angle =
+Math.random()*Math.PI*2;
 
-let radius=1.8 + Math.sin(t*3)*0.5;
 
-data.push([
-Math.cos(t)*radius,
-Math.sin(t*2)*0.8,
-Math.sin(t)*radius
+const radius =
+1.2 + Math.random()*2;
+
+
+arr.push([
+
+Math.cos(angle)*radius,
+
+(Math.random()-0.5)*2.5,
+
+Math.sin(angle)*radius
+
 ]);
 
 }
 
-return data;
+
+return arr;
 
 
 },[]);
 
 
 
+
+
 useFrame(({clock})=>{
+
 
 if(group.current){
 
 group.current.rotation.y =
-clock.elapsedTime*0.15;
+clock.elapsedTime * .12;
 
-group.current.rotation.z =
-Math.sin(clock.elapsedTime*.2)*.1;
+
+group.current.rotation.x =
+Math.sin(clock.elapsedTime*.3)*.15;
+
 
 }
+
 
 });
 
@@ -54,19 +69,23 @@ return (
 <group ref={group}>
 
 
+{/* PARTICLES */}
+
 <Points
-positions={particles.flat()}
+positions={points.flat()}
 >
 
-<pointsMaterial
-
-color="#ffffff"
-
-size={0.015}
+<PointMaterial
 
 transparent
 
-opacity={0.8}
+color="#2dd4c5"
+
+size={0.018}
+
+sizeAttenuation
+
+depthWrite={false}
 
 />
 
@@ -74,25 +93,34 @@ opacity={0.8}
 
 
 
+
+
+{/* CONNECTION NETWORK */}
+
+
 {
-particles.slice(0,80).map((p,i)=>(
+points.slice(0,80).map((point,index)=>(
+
 
 <Line
 
-key={i}
+key={index}
 
 points={[
-p,
-particles[(i+15)%particles.length]
+point,
+points[(index+7)%points.length]
 ]}
 
-color="#1f4b50"
+color="#174047"
 
 transparent
 
-opacity={0.35}
+opacity={0.45}
+
+lineWidth={0.4}
 
 />
+
 
 ))
 
@@ -100,17 +128,25 @@ opacity={0.35}
 
 
 
+
+
+{/* AI CORE */}
+
+
 <mesh>
 
 
 <icosahedronGeometry
-args={[0.5,5]}
+args={[
+0.55,
+5
+]}
 />
 
 
 <meshStandardMaterial
 
-color="#0b2025"
+color="#07191d"
 
 wireframe
 
@@ -125,7 +161,39 @@ emissiveIntensity={3}
 
 
 
+
+{/* INNER GLOW */}
+
+
+<mesh>
+
+
+<sphereGeometry
+args={[
+0.25,
+32,
+32
+]}
+/>
+
+
+<meshStandardMaterial
+
+color="#2dd4c5"
+
+emissive="#2dd4c5"
+
+emissiveIntensity={5}
+
+/>
+
+
+</mesh>
+
+
+
 </group>
+
 
 )
 
