@@ -1,0 +1,11 @@
+requirement_code,role_name,policy_requirement,process_requirement,competency,mandatory,priority,due_stage,source_document_id,source_section,assessment_requirement
+R001,Customer Support Executive,Escalation Procedure,Follow refund escalation threshold,Escalation handling,TRUE,High,Week 1,SOP-07,4.2,Quiz on escalation
+R002,Customer Support Executive,Complaint Handling,Log complaints in CRM,CRM usage,TRUE,High,Week 1,SOP-07,4.3,Practical task
+R003,Customer Support Executive,Handbook Acknowledgement,Acknowledge company handbook,Policy awareness,TRUE,High,Day 1,DOC-01,2,Checklist item
+R004,Customer Support Executive,Leave Policy Awareness,Understand leave application process,Process knowledge,FALSE,Medium,Week 1,DOC-02,3,Quiz
+R005,IT/Data roles,Information Security Basics,Complete security module before CRM access,Data handling,TRUE,High,Day 1,DOC-03-v2,4,Quiz + Prerequisite check
+R006,All Roles,Handbook Acknowledgement,Acknowledge code of conduct,Policy awareness,TRUE,High,Day 1,DOC-01,3,Checklist item
+R007,All Roles,Leave Policy Awareness,Understand annual and sick leave rules,Process knowledge,FALSE,Low,First 30 Days,DOC-02,1,Quiz
+R008,HR Executive,Data Privacy Awareness,Handle employee data per security policy,Data handling,TRUE,High,Week 1,DOC-03-v2,2,Quiz
+R009,Finance Associate,Information Security Basics,Complete security module before finance system access,Data handling,TRUE,High,Day 1,DOC-03-v2,4,Quiz + Prerequisite check
+R010,Branch Manager,Complaint Review,Review formal complaints within 48 hours,Escalation handling,TRUE,High,Week 1,SOP-07,4.3,Practical task

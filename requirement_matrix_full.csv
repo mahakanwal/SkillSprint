@@ -1,0 +1,161 @@
+﻿requirement_code,role_name,policy_requirement,process_requirement,competency,mandatory,priority,due_stage,source_document_id,source_section,assessment_requirement
+R0001,Sales Executive,1. Commission Structure,Follow Commission Structure,Commission calculation,TRUE,High,Day 1,DOC-04,1. Commission Structure,Quiz/task on commission calculation
+R0002,Sales Executive,2. Payout Schedule,Follow Payout Schedule,Payout timelines,TRUE,Medium,Week 1,DOC-04,2. Payout Schedule,Quiz/task on payout timelines
+R0003,Sales Executive,3. Clawback Policy,Follow Clawback Policy,Cancellation handling,TRUE,Low,First 30 Days,DOC-04,3. Clawback Policy,Quiz/task on cancellation handling
+R0004,Sales Executive,Q1. How much discount can I offer without approval?,Follow How much discount can I offer without approval?,Discount authority,TRUE,High,First 90 Days,FAQ-03,Q1. How much discount can I offer without approval?,Quiz/task on discount authority
+R0005,Sales Executive,Q2. What if a customer asks for a bigger discount?,Follow What if a customer asks for a bigger discount?,Escalating discount requests,FALSE,Medium,Day 1,FAQ-03,Q2. What if a customer asks for a bigger discount?,Quiz/task on escalating discount requests
+R0006,Sales Executive,Company Overview,Follow Company Overview,Company orientation,TRUE,Low,Week 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0007,Sales Executive,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,High,First 30 Days,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0008,Sales Executive,3. Leave Application,Follow Leave Application,Leave request process,TRUE,Medium,First 90 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0009,Sales Executive,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Low,Day 1,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0010,Sales Executive,2. Dress Code,Follow Dress Code,Workplace dress code,FALSE,High,Week 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0011,Sales Executive,2. Core Hours,Follow Core Hours,Attendance discipline,TRUE,Medium,First 30 Days,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0012,Sales Executive,Access Control,Follow Access Control,Information security basics,TRUE,Low,First 90 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0013,Sales Executive,1. Commission Structure,Follow Commission Structure,Commission calculation,TRUE,High,Day 1,DOC-04,1. Commission Structure,Quiz/task on commission calculation
+R0014,Sales Executive,2. Payout Schedule,Follow Payout Schedule,Payout timelines,TRUE,Medium,Week 1,DOC-04,2. Payout Schedule,Quiz/task on payout timelines
+R0015,Sales Executive,3. Clawback Policy,Follow Clawback Policy,Cancellation handling,FALSE,Low,First 30 Days,DOC-04,3. Clawback Policy,Quiz/task on cancellation handling
+R0016,Sales Executive,Q1. How much discount can I offer without approval?,Follow How much discount can I offer without approval?,Discount authority,TRUE,High,First 90 Days,FAQ-03,Q1. How much discount can I offer without approval?,Quiz/task on discount authority
+R0017,Customer Support Executive,4.1 Handling Standard Queries,Follow 1 Handling Standard Queries,Query handling,TRUE,High,Day 1,SOP-07,4.1 Handling Standard Queries,Quiz/task on query handling
+R0018,Customer Support Executive,4.2 Escalation Procedure,Follow 2 Escalation Procedure,Escalation handling,TRUE,Medium,Week 1,SOP-07,4.2 Escalation Procedure,Quiz/task on escalation handling
+R0019,Customer Support Executive,4.3 Complaint Handling,Follow 3 Complaint Handling,Complaint logging,TRUE,Low,First 30 Days,SOP-07,4.3 Complaint Handling,Quiz/task on complaint logging
+R0020,Customer Support Executive,Q1,Follow Q1,Refund threshold awareness,TRUE,High,First 90 Days,FAQ-02,Q1,Quiz/task on refund threshold awareness
+R0021,Customer Support Executive,Company Overview,Follow Company Overview,Company orientation,FALSE,Medium,Day 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0022,Customer Support Executive,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,Low,Week 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0023,Customer Support Executive,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 30 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0024,Customer Support Executive,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Medium,First 90 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0025,Customer Support Executive,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Low,Day 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0026,Customer Support Executive,2. Core Hours,Follow Core Hours,Attendance discipline,FALSE,High,Week 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0027,Customer Support Executive,Access Control,Follow Access Control,Information security basics,TRUE,Medium,First 30 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0028,Customer Support Executive,4.1 Handling Standard Queries,Follow 1 Handling Standard Queries,Query handling,TRUE,Low,First 90 Days,SOP-07,4.1 Handling Standard Queries,Quiz/task on query handling
+R0029,Customer Support Executive,4.2 Escalation Procedure,Follow 2 Escalation Procedure,Escalation handling,TRUE,High,Day 1,SOP-07,4.2 Escalation Procedure,Quiz/task on escalation handling
+R0030,Customer Support Executive,4.3 Complaint Handling,Follow 3 Complaint Handling,Complaint logging,TRUE,Medium,Week 1,SOP-07,4.3 Complaint Handling,Quiz/task on complaint logging
+R0031,Customer Support Executive,Q1,Follow Q1,Refund threshold awareness,FALSE,Low,First 30 Days,FAQ-02,Q1,Quiz/task on refund threshold awareness
+R0032,Customer Support Executive,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0033,HR Executive,1. Candidate Screening,Follow Candidate Screening,Resume screening,TRUE,High,Day 1,DOC-05,1. Candidate Screening,Quiz/task on resume screening
+R0034,HR Executive,2. Interview Scheduling,Follow Interview Scheduling,Interview coordination,TRUE,Medium,Week 1,DOC-05,2. Interview Scheduling,Quiz/task on interview coordination
+R0035,HR Executive,3. Offer and Documentation,Follow Offer and Documentation,Offer issuance,TRUE,Low,First 30 Days,DOC-05,3. Offer and Documentation,Quiz/task on offer issuance
+R0036,HR Executive,1. Filing a Grievance,Follow Filing a Grievance,Grievance intake,TRUE,High,First 90 Days,DOC-17,1. Filing a Grievance,Quiz/task on grievance intake
+R0037,HR Executive,2. Investigation Timeline,Follow Investigation Timeline,Grievance investigation,FALSE,Medium,Day 1,DOC-17,2. Investigation Timeline,Quiz/task on grievance investigation
+R0038,HR Executive,Company Overview,Follow Company Overview,Company orientation,TRUE,Low,Week 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0039,HR Executive,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,High,First 30 Days,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0040,HR Executive,3. Leave Application,Follow Leave Application,Leave request process,TRUE,Medium,First 90 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0041,HR Executive,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Low,Day 1,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0042,HR Executive,2. Dress Code,Follow Dress Code,Workplace dress code,FALSE,High,Week 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0043,HR Executive,2. Core Hours,Follow Core Hours,Attendance discipline,TRUE,Medium,First 30 Days,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0044,HR Executive,Access Control,Follow Access Control,Information security basics,TRUE,Low,First 90 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0045,HR Executive,1. Candidate Screening,Follow Candidate Screening,Resume screening,TRUE,High,Day 1,DOC-05,1. Candidate Screening,Quiz/task on resume screening
+R0046,HR Executive,2. Interview Scheduling,Follow Interview Scheduling,Interview coordination,TRUE,Medium,Week 1,DOC-05,2. Interview Scheduling,Quiz/task on interview coordination
+R0047,HR Executive,3. Offer and Documentation,Follow Offer and Documentation,Offer issuance,FALSE,Low,First 30 Days,DOC-05,3. Offer and Documentation,Quiz/task on offer issuance
+R0048,HR Executive,1. Filing a Grievance,Follow Filing a Grievance,Grievance intake,TRUE,High,First 90 Days,DOC-17,1. Filing a Grievance,Quiz/task on grievance intake
+R0049,Finance Associate,1. Eligible Expenses,Follow Eligible Expenses,Expense eligibility,TRUE,High,Day 1,DOC-06,1. Eligible Expenses,Quiz/task on expense eligibility
+R0050,Finance Associate,2. Submission Timeline,Follow Submission Timeline,Claim submission,TRUE,Medium,Week 1,DOC-06,2. Submission Timeline,Quiz/task on claim submission
+R0051,Finance Associate,3. Approval Workflow,Follow Approval Workflow,Approval routing,TRUE,Low,First 30 Days,DOC-06,3. Approval Workflow,Quiz/task on approval routing
+R0052,Finance Associate,2. Purchase Order Approval,Follow Purchase Order Approval,PO sign-off,TRUE,High,First 90 Days,DOC-16,2. Purchase Order Approval,Quiz/task on po sign-off
+R0053,Finance Associate,3. Reimbursement to Vendors,Follow Reimbursement to Vendors,Vendor payment terms,FALSE,Medium,Day 1,DOC-16,3. Reimbursement to Vendors,Quiz/task on vendor payment terms
+R0054,Finance Associate,Company Overview,Follow Company Overview,Company orientation,TRUE,Low,Week 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0055,Finance Associate,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,High,First 30 Days,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0056,Finance Associate,3. Leave Application,Follow Leave Application,Leave request process,TRUE,Medium,First 90 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0057,Finance Associate,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Low,Day 1,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0058,Finance Associate,2. Dress Code,Follow Dress Code,Workplace dress code,FALSE,High,Week 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0059,Finance Associate,2. Core Hours,Follow Core Hours,Attendance discipline,TRUE,Medium,First 30 Days,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0060,Finance Associate,Access Control,Follow Access Control,Information security basics,TRUE,Low,First 90 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0061,Finance Associate,1. Eligible Expenses,Follow Eligible Expenses,Expense eligibility,TRUE,High,Day 1,DOC-06,1. Eligible Expenses,Quiz/task on expense eligibility
+R0062,Finance Associate,2. Submission Timeline,Follow Submission Timeline,Claim submission,TRUE,Medium,Week 1,DOC-06,2. Submission Timeline,Quiz/task on claim submission
+R0063,Finance Associate,3. Approval Workflow,Follow Approval Workflow,Approval routing,FALSE,Low,First 30 Days,DOC-06,3. Approval Workflow,Quiz/task on approval routing
+R0064,Finance Associate,2. Purchase Order Approval,Follow Purchase Order Approval,PO sign-off,TRUE,High,First 90 Days,DOC-16,2. Purchase Order Approval,Quiz/task on po sign-off
+R0065,Operations Coordinator,1. Personal Protective Equipment,Follow Personal Protective Equipment,Safety compliance,TRUE,High,Day 1,DOC-07,1. Personal Protective Equipment,Quiz/task on safety compliance
+R0066,Operations Coordinator,2. Incident Reporting,Follow Incident Reporting,Incident logging,TRUE,Medium,Week 1,DOC-07,2. Incident Reporting,Quiz/task on incident logging
+R0067,Operations Coordinator,3. Equipment Checks,Follow Equipment Checks,Equipment inspection,TRUE,Low,First 30 Days,DOC-07,3. Equipment Checks,Quiz/task on equipment inspection
+R0068,Operations Coordinator,1. Vendor Onboarding,Follow Vendor Onboarding,Vendor documentation,TRUE,High,First 90 Days,DOC-16,1. Vendor Onboarding,Quiz/task on vendor documentation
+R0069,Operations Coordinator,Company Overview,Follow Company Overview,Company orientation,FALSE,Medium,Day 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0070,Operations Coordinator,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,Low,Week 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0071,Operations Coordinator,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 30 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0072,Operations Coordinator,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Medium,First 90 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0073,Operations Coordinator,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Low,Day 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0074,Operations Coordinator,2. Core Hours,Follow Core Hours,Attendance discipline,FALSE,High,Week 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0075,Operations Coordinator,Access Control,Follow Access Control,Information security basics,TRUE,Medium,First 30 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0076,Operations Coordinator,1. Personal Protective Equipment,Follow Personal Protective Equipment,Safety compliance,TRUE,Low,First 90 Days,DOC-07,1. Personal Protective Equipment,Quiz/task on safety compliance
+R0077,Operations Coordinator,2. Incident Reporting,Follow Incident Reporting,Incident logging,TRUE,High,Day 1,DOC-07,2. Incident Reporting,Quiz/task on incident logging
+R0078,Operations Coordinator,3. Equipment Checks,Follow Equipment Checks,Equipment inspection,TRUE,Medium,Week 1,DOC-07,3. Equipment Checks,Quiz/task on equipment inspection
+R0079,Operations Coordinator,1. Vendor Onboarding,Follow Vendor Onboarding,Vendor documentation,FALSE,Low,First 30 Days,DOC-16,1. Vendor Onboarding,Quiz/task on vendor documentation
+R0080,Operations Coordinator,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0081,Marketing Executive,1. Logo Usage,Follow Logo Usage,Brand asset usage,TRUE,High,Day 1,DOC-08,1. Logo Usage,Quiz/task on brand asset usage
+R0082,Marketing Executive,2. Tone of Voice,Follow Tone of Voice,Brand voice consistency,TRUE,Medium,Week 1,DOC-08,2. Tone of Voice,Quiz/task on brand voice consistency
+R0083,Marketing Executive,3. Campaign Approval,Follow Campaign Approval,Campaign sign-off,TRUE,Low,First 30 Days,DOC-08,3. Campaign Approval,Quiz/task on campaign sign-off
+R0084,Marketing Executive,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0085,Marketing Executive,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,FALSE,Medium,Day 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0086,Marketing Executive,3. Leave Application,Follow Leave Application,Leave request process,TRUE,Low,Week 1,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0087,Marketing Executive,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,High,First 30 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0088,Marketing Executive,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Medium,First 90 Days,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0089,Marketing Executive,2. Core Hours,Follow Core Hours,Attendance discipline,TRUE,Low,Day 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0090,Marketing Executive,Access Control,Follow Access Control,Information security basics,FALSE,High,Week 1,DOC-03,Access Control,Quiz/task on information security basics
+R0091,Marketing Executive,1. Logo Usage,Follow Logo Usage,Brand asset usage,TRUE,Medium,First 30 Days,DOC-08,1. Logo Usage,Quiz/task on brand asset usage
+R0092,Marketing Executive,2. Tone of Voice,Follow Tone of Voice,Brand voice consistency,TRUE,Low,First 90 Days,DOC-08,2. Tone of Voice,Quiz/task on brand voice consistency
+R0093,Marketing Executive,3. Campaign Approval,Follow Campaign Approval,Campaign sign-off,TRUE,High,Day 1,DOC-08,3. Campaign Approval,Quiz/task on campaign sign-off
+R0094,Marketing Executive,Company Overview,Follow Company Overview,Company orientation,TRUE,Medium,Week 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0095,Marketing Executive,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,FALSE,Low,First 30 Days,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0096,Marketing Executive,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 90 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0097,Software Support Engineer,1. Ticket Prioritization,Follow Ticket Prioritization,Ticket triage,TRUE,High,Day 1,DOC-09,1. Ticket Prioritization,Quiz/task on ticket triage
+R0098,Software Support Engineer,2. Critical Ticket Response,Follow Critical Ticket Response,SLA response time,TRUE,Medium,Week 1,DOC-09,2. Critical Ticket Response,Quiz/task on sla response time
+R0099,Software Support Engineer,3. Ticket Closure,Follow Ticket Closure,Ticket resolution confirmation,TRUE,Low,First 30 Days,DOC-09,3. Ticket Closure,Quiz/task on ticket resolution confirmation
+R0100,Software Support Engineer,Access Control,Follow Access Control,Security compliance,TRUE,High,First 90 Days,DOC-03,Access Control,Quiz/task on security compliance
+R0101,Software Support Engineer,Company Overview,Follow Company Overview,Company orientation,FALSE,Medium,Day 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0102,Software Support Engineer,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,Low,Week 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0103,Software Support Engineer,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 30 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0104,Software Support Engineer,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Medium,First 90 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0105,Software Support Engineer,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Low,Day 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0106,Software Support Engineer,2. Core Hours,Follow Core Hours,Attendance discipline,FALSE,High,Week 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0107,Software Support Engineer,Access Control,Follow Access Control,Information security basics,TRUE,Medium,First 30 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0108,Software Support Engineer,1. Ticket Prioritization,Follow Ticket Prioritization,Ticket triage,TRUE,Low,First 90 Days,DOC-09,1. Ticket Prioritization,Quiz/task on ticket triage
+R0109,Software Support Engineer,2. Critical Ticket Response,Follow Critical Ticket Response,SLA response time,TRUE,High,Day 1,DOC-09,2. Critical Ticket Response,Quiz/task on sla response time
+R0110,Software Support Engineer,3. Ticket Closure,Follow Ticket Closure,Ticket resolution confirmation,TRUE,Medium,Week 1,DOC-09,3. Ticket Closure,Quiz/task on ticket resolution confirmation
+R0111,Software Support Engineer,Access Control,Follow Access Control,Security compliance,FALSE,Low,First 30 Days,DOC-03,Access Control,Quiz/task on security compliance
+R0112,Software Support Engineer,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0113,Branch Manager,1. Daily Compliance Checks,Follow Daily Compliance Checks,Daily compliance routine,TRUE,High,Day 1,DOC-10,1. Daily Compliance Checks,Quiz/task on daily compliance routine
+R0114,Branch Manager,2. Incident Escalation,Follow Incident Escalation,Incident review,TRUE,Medium,Week 1,DOC-10,2. Incident Escalation,Quiz/task on incident review
+R0115,Branch Manager,3. Annual Performance Review,Follow Annual Performance Review,Performance review cadence,TRUE,Low,First 30 Days,DOC-10,3. Annual Performance Review,Quiz/task on performance review cadence
+R0116,Branch Manager,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0117,Branch Manager,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,FALSE,Medium,Day 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0118,Branch Manager,3. Leave Application,Follow Leave Application,Leave request process,TRUE,Low,Week 1,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0119,Branch Manager,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,High,First 30 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0120,Branch Manager,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Medium,First 90 Days,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0121,Branch Manager,2. Core Hours,Follow Core Hours,Attendance discipline,TRUE,Low,Day 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0122,Branch Manager,Access Control,Follow Access Control,Information security basics,FALSE,High,Week 1,DOC-03,Access Control,Quiz/task on information security basics
+R0123,Branch Manager,1. Daily Compliance Checks,Follow Daily Compliance Checks,Daily compliance routine,TRUE,Medium,First 30 Days,DOC-10,1. Daily Compliance Checks,Quiz/task on daily compliance routine
+R0124,Branch Manager,2. Incident Escalation,Follow Incident Escalation,Incident review,TRUE,Low,First 90 Days,DOC-10,2. Incident Escalation,Quiz/task on incident review
+R0125,Branch Manager,3. Annual Performance Review,Follow Annual Performance Review,Performance review cadence,TRUE,High,Day 1,DOC-10,3. Annual Performance Review,Quiz/task on performance review cadence
+R0126,Branch Manager,Company Overview,Follow Company Overview,Company orientation,TRUE,Medium,Week 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0127,Branch Manager,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,FALSE,Low,First 30 Days,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0128,Branch Manager,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 90 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0129,Data Analyst,1. Report Cadence,Follow Report Cadence,Reporting discipline,TRUE,High,Day 1,DOC-11,1. Report Cadence,Quiz/task on reporting discipline
+R0130,Data Analyst,2. Data Retention,Follow Data Retention,Data retention compliance,TRUE,Medium,Week 1,DOC-11,2. Data Retention,Quiz/task on data retention compliance
+R0131,Data Analyst,3. Data Access Requests,Follow Data Access Requests,Data access governance,TRUE,Low,First 30 Days,DOC-11,3. Data Access Requests,Quiz/task on data access governance
+R0132,Data Analyst,1. Customer Data Handling,Follow Customer Data Handling,Data privacy handling,TRUE,High,First 90 Days,DOC-15,1. Customer Data Handling,Quiz/task on data privacy handling
+R0133,Data Analyst,Company Overview,Follow Company Overview,Company orientation,FALSE,Medium,Day 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0134,Data Analyst,1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,Low,Week 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0135,Data Analyst,3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 30 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0136,Data Analyst,1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Medium,First 90 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0137,Data Analyst,2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Low,Day 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0138,Data Analyst,2. Core Hours,Follow Core Hours,Attendance discipline,FALSE,High,Week 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0139,Data Analyst,Access Control,Follow Access Control,Information security basics,TRUE,Medium,First 30 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0140,Data Analyst,1. Report Cadence,Follow Report Cadence,Reporting discipline,TRUE,Low,First 90 Days,DOC-11,1. Report Cadence,Quiz/task on reporting discipline
+R0141,Data Analyst,2. Data Retention,Follow Data Retention,Data retention compliance,TRUE,High,Day 1,DOC-11,2. Data Retention,Quiz/task on data retention compliance
+R0142,Data Analyst,3. Data Access Requests,Follow Data Access Requests,Data access governance,TRUE,Medium,Week 1,DOC-11,3. Data Access Requests,Quiz/task on data access governance
+R0143,Data Analyst,1. Customer Data Handling,Follow Customer Data Handling,Data privacy handling,FALSE,Low,First 30 Days,DOC-15,1. Customer Data Handling,Quiz/task on data privacy handling
+R0144,Data Analyst,Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation
+R0145,Team Leader (Customer Support),1. Review Cadence,Follow Review Cadence,Team review cadence,TRUE,High,Day 1,DOC-12,1. Review Cadence,Quiz/task on team review cadence
+R0146,Team Leader (Customer Support),2. Scorecard Criteria,Follow Scorecard Criteria,Performance scoring,TRUE,Medium,Week 1,DOC-12,2. Scorecard Criteria,Quiz/task on performance scoring
+R0147,Team Leader (Customer Support),3. Coaching Plans,Follow Coaching Plans,Coaching plan management,TRUE,Low,First 30 Days,DOC-12,3. Coaching Plans,Quiz/task on coaching plan management
+R0148,Team Leader (Customer Support),4.2 Escalation Procedure,Follow 2 Escalation Procedure,Escalation oversight,TRUE,High,First 90 Days,SOP-07,4.2 Escalation Procedure,Quiz/task on escalation oversight
+R0149,Team Leader (Customer Support),Company Overview,Follow Company Overview,Company orientation,FALSE,Medium,Day 1,DOC-01,Company Overview,Quiz/task on company orientation
+R0150,Team Leader (Customer Support),1. Annual Leave,Follow Annual Leave,Leave entitlement awareness,TRUE,Low,Week 1,DOC-02,1. Annual Leave,Quiz/task on leave entitlement awareness
+R0151,Team Leader (Customer Support),3. Leave Application,Follow Leave Application,Leave request process,TRUE,High,First 30 Days,DOC-02,3. Leave Application,Quiz/task on leave request process
+R0152,Team Leader (Customer Support),1. Professional Conduct,Follow Professional Conduct,Professional conduct,TRUE,Medium,First 90 Days,DOC-13,1. Professional Conduct,Quiz/task on professional conduct
+R0153,Team Leader (Customer Support),2. Dress Code,Follow Dress Code,Workplace dress code,TRUE,Low,Day 1,DOC-13,2. Dress Code,Quiz/task on workplace dress code
+R0154,Team Leader (Customer Support),2. Core Hours,Follow Core Hours,Attendance discipline,FALSE,High,Week 1,DOC-14,2. Core Hours,Quiz/task on attendance discipline
+R0155,Team Leader (Customer Support),Access Control,Follow Access Control,Information security basics,TRUE,Medium,First 30 Days,DOC-03,Access Control,Quiz/task on information security basics
+R0156,Team Leader (Customer Support),1. Review Cadence,Follow Review Cadence,Team review cadence,TRUE,Low,First 90 Days,DOC-12,1. Review Cadence,Quiz/task on team review cadence
+R0157,Team Leader (Customer Support),2. Scorecard Criteria,Follow Scorecard Criteria,Performance scoring,TRUE,High,Day 1,DOC-12,2. Scorecard Criteria,Quiz/task on performance scoring
+R0158,Team Leader (Customer Support),3. Coaching Plans,Follow Coaching Plans,Coaching plan management,TRUE,Medium,Week 1,DOC-12,3. Coaching Plans,Quiz/task on coaching plan management
+R0159,Team Leader (Customer Support),4.2 Escalation Procedure,Follow 2 Escalation Procedure,Escalation oversight,FALSE,Low,First 30 Days,SOP-07,4.2 Escalation Procedure,Quiz/task on escalation oversight
+R0160,Team Leader (Customer Support),Company Overview,Follow Company Overview,Company orientation,TRUE,High,First 90 Days,DOC-01,Company Overview,Quiz/task on company orientation

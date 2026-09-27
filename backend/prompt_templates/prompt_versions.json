@@ -1,0 +1,24 @@
+{
+  "_comment": "SRS Steps 40-41. Prompts live in these files, never inline in code. To roll out a new prompt: add new files, add an entry here, and change 'active'. Every generated plan stores the prompt version it used.",
+  "active": {
+    "onboarding_plan": "v2.0",
+    "module_regeneration": "v1.0",
+    "quiz_generation": "v1.0"
+  },
+  "templates": {
+    "onboarding_plan": {
+      "v1.0": {"system": "onboarding_plan_v1.txt", "user": null, "created": "2026-09-20",
+               "notes": "Original inline prompt: modules, checklist, tasks, quiz."},
+      "v2.0": {"system": "onboarding_plan_v2.txt", "user": "onboarding_plan_user_v2.txt", "created": "2026-09-26",
+               "notes": "Adds prompt-injection rules, source precedence, 6 onboarding stages, scenario tasks, multiple-response quiz, assessments with rubrics, completion criteria, prerequisites, insufficient_information."}
+    },
+    "module_regeneration": {
+      "v1.0": {"system": "module_generation_v1.txt", "user": "onboarding_plan_user_v2.txt", "created": "2026-09-26",
+               "notes": "Selective regeneration of items affected by a policy update."}
+    },
+    "quiz_generation": {
+      "v1.0": {"system": "quiz_generation_v1.txt", "user": null, "created": "2026-09-26",
+               "notes": "Additional practice quiz focused on weak topics."}
+    }
+  }
+}

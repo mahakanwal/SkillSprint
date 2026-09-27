@@ -1,0 +1,50 @@
+{
+  "_comment": "SRS Step 34 -- configurable source-precedence rules. Lower rank = higher authority. Edit this file to change the hierarchy; no code change needed.",
+  "rules": [
+    {
+      "rank": 1,
+      "label": "Latest approved policy",
+      "doc_types": [
+        "Policy",
+        "Compliance"
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Department SOP / process manual",
+      "doc_types": [
+        "SOP",
+        "Manual",
+        "Guideline",
+        "Role Description"
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Employee handbook / forms",
+      "doc_types": [
+        "Handbook",
+        "Form"
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "FAQ",
+      "doc_types": [
+        "FAQ"
+      ]
+    },
+    {
+      "rank": 5,
+      "label": "Informal guidance",
+      "doc_types": [
+        "Informal",
+        "Note",
+        "Other"
+      ]
+    }
+  ],
+  "requirement_matrix_rank": 0,
+  "obsolete_versions_never_win": true,
+  "same_rank_tiebreak": "latest_effective_date"
+}

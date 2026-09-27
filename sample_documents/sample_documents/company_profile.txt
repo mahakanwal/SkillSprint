@@ -1,0 +1,38 @@
+COMPANY PROFILE - NimbusRetail Pvt Ltd
+========================================
+Industry: Retail-Technology (E-commerce + Logistics)
+Founded: 2019
+Departments: Sales, Customer Support, HR, Finance, Operations, Marketing,
+             IT/Software, Warehouse/Logistics, Data & Analytics, Management
+
+10 JOB ROLES:
+1. Sales Executive
+2. Customer Support Executive
+3. HR Executive
+4. Finance Associate
+5. Operations Coordinator
+6. Marketing Executive
+7. Software Support Engineer
+8. Branch Manager
+9. Data Analyst
+10. Team Leader (Customer Support)
+
+DOCUMENT LIST (Phase 1 - 7 documents created):
+- DOC-01: Employee Handbook v1.0
+- DOC-02: Leave Policy v1.0
+- DOC-03: Information Security Policy v1.0 (SUPERSEDED)
+- DOC-03: Information Security Policy v2.0 (ACTIVE) -- Version conflict case
+- SOP-07: Customer Support Escalation SOP v1.0
+- FAQ-02: Customer Support FAQ -- Contradicts SOP-07 on refund escalation threshold
+- ADV-01: Adversarial document containing prompt-injection instructions
+
+CONFLICT CASE NOTE:
+SOP-07 (Section 4.2) says: escalate refunds above PKR 10,000 to Team Leader.
+FAQ-02 (Q1) says: escalate refunds above PKR 5,000 to Branch Manager.
+--> This is a deliberate contradiction case (SOP should take precedence over FAQ).
+
+PRECEDENCE ORDER (to implement in policy_precedence.py):
+1. Latest Approved Policy (highest)
+2. Department SOP
+3. FAQ
+4. Informal Guidance (lowest)

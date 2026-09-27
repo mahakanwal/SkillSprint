@@ -1,0 +1,102 @@
+.validation-wrapper{
+
+    background:white;
+    padding:25px;
+    border-radius:15px;
+
+}
+
+
+.validation-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.validation-top button{
+
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#2563eb;
+    color:white;
+
+}
+
+
+
+.score-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-top:25px;
+
+}
+
+
+
+.score-card{
+
+    padding:20px;
+    border:1px solid #ddd;
+    border-radius:12px;
+
+}
+
+
+
+.score-card span{
+
+    font-size:32px;
+    font-weight:bold;
+
+}
+
+
+
+.bar{
+
+    height:8px;
+    background:#eee;
+    margin-top:15px;
+    border-radius:10px;
+
+}
+
+
+
+.bar div{
+
+    height:100%;
+    background:#2563eb;
+    border-radius:10px;
+
+}
+
+
+
+.status-box{
+
+    margin-top:25px;
+    padding:15px;
+    background:#f3f4f6;
+    border-radius:10px;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .score-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

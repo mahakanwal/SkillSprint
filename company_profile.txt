@@ -1,0 +1,90 @@
+COMPANY PROFILE - NimbusRetail Pvt Ltd
+========================================
+Industry: Retail-Technology (E-commerce + Logistics)
+Founded: 2019
+Departments: Sales, Customer Support, HR, Finance, Operations, Marketing,
+             IT/Software, Warehouse/Logistics, Data & Analytics, Management
+
+10 JOB ROLES:
+1. Sales Executive
+2. Customer Support Executive
+3. HR Executive
+4. Finance Associate
+5. Operations Coordinator
+6. Marketing Executive
+7. Software Support Engineer
+8. Branch Manager
+9. Data Analyst
+10. Team Leader (Customer Support)
+
+DATASET STATUS (this file supersedes the earlier "Phase 1 - 7 documents" note):
+
+20 ACTIVE DOCUMENTS:
+  DOC-01  Employee Handbook v2.0                    (policies/)
+  DOC-02  Leave Policy v2.0                          (policies/)
+  DOC-03  Information Security Policy v2.0           (policies/)  [pre-existing]
+  DOC-04  Sales Commission Policy v2.0                (policies/)
+  DOC-05  HR Recruitment and Onboarding SOP v1.0      (sops/)
+  DOC-06  Finance Expense Reimbursement Policy v2.0   (policies/)
+  DOC-07  Warehouse and Operations Safety SOP v1.0    (sops/)
+  DOC-08  Marketing Brand Guidelines v1.0             (policies/)
+  DOC-09  IT Support Ticketing SOP v1.0               (sops/)
+  DOC-10  Branch Manager Compliance Manual v2.0       (compliance/)
+  DOC-11  Data Analytics and Reporting SOP v1.0       (sops/)
+  DOC-12  Team Leader Performance Review Process v1.0 (process_manuals/)
+  DOC-13  Code of Conduct Policy v2.0                 (policies/)
+  DOC-14  Remote Work and Attendance Policy v1.0      (policies/)
+  DOC-15  Data Privacy and Compliance Policy v2.0     (compliance/)
+  DOC-16  Vendor and Procurement Process Manual v1.0  (process_manuals/)
+  DOC-17  Anti-Harassment and Grievance Policy v2.0   (compliance/)
+  SOP-07  Customer Support Escalation SOP v2.0        (sops/)       [pre-existing]
+  FAQ-02  Customer Support FAQ                        (faqs/)       [pre-existing]
+  FAQ-03  Sales Discount Approval FAQ                 (faqs/)
+
+10 POLICY-VERSION-CHANGE PAIRS (old version marked "-OLD", superseded):
+  DOC-03  Information Security Policy: v1.0 -> v2.0       [pre-existing]
+  DOC-01  Employee Handbook: v1.0 -> v2.0 (remote-work clause removed)
+  DOC-02  Leave Policy: v1.0 -> v2.0 (15 -> 18 days annual leave)
+  DOC-04  Sales Commission Policy: v1.0 -> v2.0 (flat 5% -> tiered 5%/7%)
+  DOC-06  Finance Expense Policy: v1.0 -> v2.0 (30-day -> 7-day submission window)
+  DOC-10  Branch Manager Compliance Manual: v1.0 -> v2.0 (biennial -> annual review)
+  DOC-13  Code of Conduct: v1.0 -> v2.0 (optional -> mandatory COI disclosure)
+  DOC-15  Data Privacy Policy: v1.0 -> v2.0 (5-year -> 3-year retention)
+  DOC-17  Anti-Harassment Policy: v1.0 -> v2.0 (30-day -> 15-day investigation)
+  SOP-07  Customer Support Escalation SOP: v1.0 -> v2.0 (48hr -> 24hr escalation window)
+
+10 CONFLICT / AMBIGUITY CASES: see CONFLICT_CASES.md
+
+10 ADVERSARIAL / PROMPT-INJECTION CASES (adversarial_cases/):
+  ADV-01  Suspicious Onboarding Note       - fake "system override" instruction  [pre-existing]
+  ADV-02  SOP Addendum                      - hidden instruction mid-paragraph
+  ADV-03  Customer FAQ Special Notice       - fake internal "skip validation" note
+  ADV-04  Internal Memo                     - attempts to extract system prompt
+  ADV-05  Role Description                  - impersonates admin to grant unauthorized access
+  ADV-06  Executive Directive               - impersonates CEO to waive mandatory training
+  ADV-07  Process Note                      - fake [SYSTEM] tag instruction
+  ADV-08  QA Notes                          - reverse-psychology "ignore contradictions" prompt
+  ADV-09  Requirement Addendum              - fabricated requirement code (R999) overriding a real one
+  ADV-10  System Configuration Note         - classic jailbreak/persona-override prompt
+
+REQUIREMENT MATRIX: requirement_matrix_full.csv
+  160 requirements across all 10 roles (>=150 required)
+  130 mandatory (>=50 required)
+  Every row's source_document_id/source_section points to a REAL section
+  heading in one of the 20 active documents above -- traceability checks
+  against this matrix are genuine, not synthetic.
+
+PRECEDENCE ORDER (config/policy_precedence.py):
+1. Latest Approved Policy (highest)
+2. Department SOP
+3. FAQ
+4. Informal Guidance (lowest)
+
+NOTE: earlier versions of this project contained a separate, inconsistent
+set of documents (HR-001/002, FIN-001/002, MERN-001/002, CMS-001/002) using
+a different role taxonomy (e.g. "MERN Stack Developer", "CMS Developer")
+that does NOT match this company's official 10-role list above, and whose
+content was placeholder metadata rather than real policy text. Those files
+and the old requirement_matrix.csv built from them should be removed/ignored
+in favor of this dataset, to avoid two conflicting role taxonomies existing
+in the same database.

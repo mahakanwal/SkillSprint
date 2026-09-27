@@ -1,0 +1,2 @@
+requirement_code,role_name,policy_requirement,process_requirement,competency,mandatory,priority,due_stage,source_document_code,source_section,assessment_requirement
+R001,Customer Support Executive,Must follow escalation SOP within 24 hours,Log every ticket in CRM before closing,Conflict de-escalation,true,High,Week 1,SOP-07,4.2,Explain the 3-step escalation process
