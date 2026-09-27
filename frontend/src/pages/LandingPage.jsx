@@ -1,46 +1,35 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { Float, OrbitControls, Stars } from "@react-three/drei";
-import { motion } from "framer-motion";
+
 import {
-  ArrowRight,
-  Brain,
-  FileText,
-  ShieldCheck,
-  Sparkles,
-  Target,
-  LogIn
+Canvas
+} from "@react-three/fiber";
+
+import {
+Stars,
+OrbitControls
+} from "@react-three/drei";
+
+
+import {
+motion
+} from "framer-motion";
+
+
+import {
+Link
+} from "react-router-dom";
+
+
+import {
+ArrowRight
 } from "lucide-react";
 
+
+import NeuralGraph from "../components/three/NeuralGraph";
+
+
 import "./LandingPage.css";
-import { Link } from "react-router-dom";
 
-
-function AIOrb(){
-
-  return (
-    <Float
-      speed={2}
-      rotationIntensity={1}
-      floatIntensity={1}
-    >
-
-      <mesh>
-
-        <icosahedronGeometry args={[1.4,5]} />
-
-        <meshStandardMaterial
-          color="#2dd4c5"
-          emissive="#0e8f91"
-          emissiveIntensity={2}
-          wireframe
-        />
-
-      </mesh>
-
-    </Float>
-  );
-}
 
 
 
@@ -49,16 +38,152 @@ export default function LandingPage(){
 
 return (
 
-<div className="ss-page">
+<div className="landing">
 
 
-{/* HERO */}
+<nav className="nav">
+
+
+<div className="logo">
+
+<div className="logo-mark">
+✦
+</div>
+
+SkillSprint
+<span>
+AI
+</span>
+
+</div>
+
+
+
+<div className="links">
+
+<a>Product</a>
+<a>Features</a>
+<a>Validation</a>
+<a>About</a>
+
+</div>
+
+
+
+<div className="nav-buttons">
+
+<Link to="/login">
+Login
+</Link>
+
+
+<Link
+className="nav-cta"
+to="/login"
+>
+
+Try Now
+
+</Link>
+
+
+</div>
+
+
+</nav>
+
+
+
+
 
 <section className="hero">
 
 
-<div className="hero-bg">
-<Canvas camera={{position:[0,0,5]}}>
+<div className="hero-copy">
+
+
+<motion.span
+
+initial={{opacity:0}}
+
+animate={{opacity:1}}
+
+>
+
+GENERATIVE AI POWERED
+
+</motion.span>
+
+
+
+
+<h1>
+
+Turn company
+<br/>
+
+knowledge into
+<br/>
+
+<span>
+
+intelligent onboarding
+
+</span>
+
+</h1>
+
+
+
+<p>
+
+SkillSprint AI analyzes policies,
+SOPs, role documents and creates
+personalized employee learning journeys.
+
+</p>
+
+
+
+<div className="hero-actions">
+
+
+<Link
+to="/login"
+className="primary"
+>
+
+Start Building
+
+<ArrowRight/>
+
+</Link>
+
+
+<Link
+to="/login"
+className="outline"
+>
+
+Login
+
+</Link>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div className="webgl">
+
+
+<Canvas>
 
 <ambientLight intensity={1}/>
 
@@ -67,13 +192,13 @@ position={[3,3,3]}
 color="#2dd4c5"
 />
 
-<AIOrb/>
+
+<NeuralGraph/>
+
 
 <Stars
-radius={100}
-depth={50}
 count={3000}
-factor={4}
+radius={30}
 />
 
 
@@ -83,124 +208,6 @@ enableZoom={false}
 
 
 </Canvas>
-</div>
-
-
-
-<motion.div
-className="hero-content"
-initial={{opacity:0,y:40}}
-animate={{opacity:1,y:0}}
->
-
-
-<div className="badge">
-<Sparkles size={15}/>
- Generative AI Powered
-</div>
-
-
-<h1>
-
-Transform Employee
-<br/>
-
-<span>
-Onboarding With AI
-</span>
-
-</h1>
-
-
-<p>
-
-SkillSprint AI analyzes company documents,
-policies, SOPs and role requirements to create
-personalized learning journeys.
-
-</p>
-
-
-<div className="buttons">
-
-
-<Link
-to="/login"
-className="primary"
->
-Try SkillSprint AI
-</Link>
-
-
-<Link
-to="/login"
-className="secondary"
->
-Login
-</Link>
-
-
-</div>
-
-
-</motion.div>
-
-
-</section>
-
-
-
-
-
-{/* HOW IT WORKS */}
-
-
-<section className="section">
-
-
-<div className="section-title">
-
-<h2>
-How SkillSprint AI Works
-</h2>
-
-<p>
-From documents to personalized employee training.
-</p>
-
-</div>
-
-
-
-<div className="cards">
-
-
-<Card
-icon={<FileText/>}
-title="Upload Documents"
-text="Analyze policies, SOPs, FAQs and company knowledge."
-/>
-
-
-<Card
-icon={<Brain/>}
-title="AI Generation"
-text="Generate learning modules, tasks, quizzes and assessments."
-/>
-
-
-<Card
-icon={<Target/>}
-title="Role Based Learning"
-text="Create onboarding plans based on employee role."
-/>
-
-
-<Card
-icon={<ShieldCheck/>}
-title="Validation"
-text="Verify requirements using independent validation."
-/>
 
 
 </div>
@@ -214,118 +221,87 @@ text="Verify requirements using independent validation."
 
 
 
-{/* AI EXPERIENCE */}
-
-
-
-<section className="ai-section">
+<section className="steps">
 
 
 <div>
+
+<h3>
+01. Upload
+</h3>
+
+<p>
+Company policies, SOPs,
+FAQs and role documents.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>
+02. Generate
+</h3>
+
+<p>
+AI creates personalized
+learning modules and tasks.
+</p>
+
+</div>
+
+
+
+
+<div>
+
+<h3>
+03. Validate
+</h3>
+
+<p>
+Python validates coverage,
+sources and accuracy.
+</p>
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section className="big-section">
 
 
 <h2>
 
-Personalized Learning Experience
+Your onboarding,
+finally intelligent
 
 </h2>
 
 
-<p>
-
-Every employee receives a customized onboarding path
-based on department, role, experience and business rules.
-
-</p>
-
-
-<ul>
-
-<li>Learning Modules</li>
-<li>Practical Tasks</li>
-<li>Quizzes</li>
-<li>Progress Tracking</li>
-
-</ul>
-
-
-</div>
-
-
-
-<div className="dashboard">
-
+<div className="graph-box">
 
 <div>
-Module Completion
-<strong>86%</strong>
+Employee Profile
 </div>
-
 
 <div>
-Requirement Coverage
-<strong>100%</strong>
+AI Learning Plan
 </div>
-
 
 <div>
-Validation Status
-<strong>Verified</strong>
+Validation Result
 </div>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-
-
-{/* VALIDATION */}
-
-
-
-<section className="validation">
-
-
-<ShieldCheck size={60}/>
-
-
-<h2>
-
-Reliable AI With Ground Truth Validation
-
-</h2>
-
-
-<p>
-
-SkillSprint AI combines Generative AI with
-Python based validation to check coverage,
-traceability and unsupported content.
-
-</p>
-
-
-
-<div className="pipeline">
-
-
-<span>AI Generation</span>
-
-↓
-
-<span>Python Validation</span>
-
-↓
-
-<span>Verified Plan</span>
 
 
 </div>
@@ -335,11 +311,6 @@ traceability and unsupported content.
 
 
 
-
-
-
-
-{/* CTA */}
 
 
 
@@ -348,26 +319,17 @@ traceability and unsupported content.
 
 <h2>
 
-Build Smarter Employee Training
-With SkillSprint AI
+Build smarter learning
+experiences.
 
 </h2>
 
 
-<div>
+<Link to="/login">
 
+Get Started
 
-<a href="/try">
-Start Now
-</a>
-
-
-<a href="/login">
-Login
-</a>
-
-
-</div>
+</Link>
 
 
 </section>
@@ -376,52 +338,6 @@ Login
 
 </div>
 
-)
-
-}
-
-
-
-
-
-function Card({icon,title,text}){
-
-
-return (
-
-<motion.div
-
-whileHover={{
-y:-10
-}}
-
-className="card"
-
->
-
-
-<div className="icon">
-
-{icon}
-
-</div>
-
-
-<h3>
-
-{title}
-
-</h3>
-
-
-<p>
-
-{text}
-
-</p>
-
-
-</motion.div>
 
 )
 
