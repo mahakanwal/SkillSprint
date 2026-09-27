@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import "./LandingPage.css";
+import { Link } from "react-router-dom";
 
 
 function AIOrb(){
@@ -123,20 +124,20 @@ personalized learning journeys.
 <div className="buttons">
 
 
-<a href="/try" className="primary">
-
+<Link
+to="/login"
+className="primary"
+>
 Try SkillSprint AI
-<ArrowRight size={18}/>
-
-</a>
+</Link>
 
 
-<a href="/login" className="secondary">
-
-<LogIn size={18}/>
+<Link
+to="/login"
+className="secondary"
+>
 Login
-
-</a>
+</Link>
 
 
 </div>
