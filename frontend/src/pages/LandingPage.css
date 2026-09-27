@@ -632,3 +632,102 @@ transparent 50%
 
 
 }
+
+.reveal{
+
+opacity:0;
+
+}
+
+
+
+.hero h1{
+
+animation:
+textGlow 5s infinite alternate;
+
+}
+
+
+
+@keyframes textGlow{
+
+
+from{
+
+text-shadow:
+0 0 0 transparent;
+
+}
+
+
+to{
+
+text-shadow:
+0 0 40px #2dd4c544;
+
+}
+
+
+}
+
+
+
+
+.graph-box{
+
+perspective:1000px;
+
+}
+
+
+
+.graph-box div:hover{
+
+transform:
+
+translateY(-20px)
+rotateX(8deg);
+
+box-shadow:
+
+0 30px 80px #2dd4c522;
+
+}
+
+
+
+
+
+.webgl canvas{
+
+filter:
+
+drop-shadow(
+0 0 80px #2dd4c533
+);
+
+}
+
+
+
+
+
+.steps div{
+
+transition:.5s;
+
+}
+
+
+
+.steps div:hover{
+
+background:#0b1214;
+
+border-radius:20px;
+
+transform:
+translateY(-10px);
+
+}
