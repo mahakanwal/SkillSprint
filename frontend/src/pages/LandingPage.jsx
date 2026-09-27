@@ -211,7 +211,37 @@ enableZoom={false}
 
 
 </div>
+<div className="floating-card card-one">
 
+<span>
+DOCUMENT
+</span>
+
+Company Policy.pdf
+
+</div>
+
+
+<div className="floating-card card-two">
+
+<span>
+AI GENERATED
+</span>
+
+Learning Plan
+
+</div>
+
+
+<div className="floating-card card-three">
+
+<span>
+VERIFIED
+</span>
+
+100% Coverage
+
+</div>
 
 </section>
 

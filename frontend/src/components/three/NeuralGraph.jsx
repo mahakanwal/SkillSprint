@@ -1,46 +1,51 @@
 import React, { useMemo, useRef } from "react";
-import { Points, Line } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { Line, Points } from "@react-three/drei";
 
 
-export default function NeuralGraph() {
+export default function NeuralGraph(){
 
-  const group = useRef();
-
-
-  const nodes = useMemo(() => {
-
-    const arr = [];
-
-    for(let i=0;i<180;i++){
-
-      const r = 2 + Math.random()*1.5;
-      const a = Math.random()*Math.PI*2;
-
-      arr.push([
-        Math.cos(a)*r,
-        (Math.random()-0.5)*3,
-        Math.sin(a)*r
-      ]);
-
-    }
-
-    return arr;
-
-  },[]);
+const group = useRef();
 
 
+const particles = useMemo(()=>{
 
-  useFrame(({clock})=>{
+let data=[];
 
-    if(group.current){
+for(let i=0;i<260;i++){
 
-      group.current.rotation.y =
-      clock.getElapsedTime()*0.08;
+let t=i/260*Math.PI*6;
 
-    }
+let radius=1.8 + Math.sin(t*3)*0.5;
 
-  });
+data.push([
+Math.cos(t)*radius,
+Math.sin(t*2)*0.8,
+Math.sin(t)*radius
+]);
+
+}
+
+return data;
+
+
+},[]);
+
+
+
+useFrame(({clock})=>{
+
+if(group.current){
+
+group.current.rotation.y =
+clock.elapsedTime*0.15;
+
+group.current.rotation.z =
+Math.sin(clock.elapsedTime*.2)*.1;
+
+}
+
+});
 
 
 
@@ -50,17 +55,14 @@ return (
 
 
 <Points
-positions={
-nodes.flat()
-}
-stride={3}
+positions={particles.flat()}
 >
 
 <pointsMaterial
 
-color="#2dd4c5"
+color="#ffffff"
 
-size={0.025}
+size={0.015}
 
 transparent
 
@@ -73,8 +75,7 @@ opacity={0.8}
 
 
 {
-
-nodes.slice(0,50).map((p,i)=>(
+particles.slice(0,80).map((p,i)=>(
 
 <Line
 
@@ -82,16 +83,14 @@ key={i}
 
 points={[
 p,
-nodes[(i+5)%nodes.length]
+particles[(i+15)%particles.length]
 ]}
 
-color="#24535b"
-
-lineWidth={0.5}
+color="#1f4b50"
 
 transparent
 
-opacity={0.5}
+opacity={0.35}
 
 />
 
@@ -103,22 +102,24 @@ opacity={0.5}
 
 <mesh>
 
+
 <icosahedronGeometry
-args={[0.7,4]}
+args={[0.5,5]}
 />
 
 
 <meshStandardMaterial
 
-color="#06272c"
-
-emissive="#2dd4c5"
-
-emissiveIntensity={2}
+color="#0b2025"
 
 wireframe
 
+emissive="#2dd4c5"
+
+emissiveIntensity={3}
+
 />
+
 
 </mesh>
 
