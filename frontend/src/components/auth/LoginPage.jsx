@@ -542,20 +542,20 @@ const styles = `
   .ss-login svg { flex-shrink: 0; }
   .ss-login button:focus-visible { outline: 2px solid var(--ss-accent); outline-offset: 4px; }
   .ss-login .ss-accent { color: var(--ss-accent); }
-  .ss-login .ss-auth-side { display: flex; flex-direction: column; min-width: 0; padding: 30px clamp(24px, 3.5vw, 66px) 42px; }
+  .ss-login .ss-auth-side { display: flex; flex-direction: column; min-width: 0; padding: clamp(14px, 4vh, 30px) clamp(24px, 3.5vw, 66px) clamp(16px, 4vh, 42px); }
   .ss-login .ss-brand { display: inline-flex; align-items: center; align-self: flex-start; gap: 12px; font-size: 18px; font-weight: 650; letter-spacing: -.5px; }
   .ss-login .ss-brand-icon { display: grid; place-items: center; width: 38px; height: 38px; color: var(--ss-accent); background: #092024; border: 1px solid #16454a; border-radius: 9px; }
-  .ss-login .ss-auth-content { width: 100%; max-width: 420px; margin: auto; padding-top: 38px; }
+  .ss-login .ss-auth-content { width: 100%; max-width: 420px; margin: auto; padding-top: clamp(8px, 3.5vh, 38px); }
   .ss-login .ss-eyebrow { display: flex; align-items: center; gap: 9px; color: var(--ss-accent); font-size: 11px; line-height: 1.6; font-weight: 600; text-transform: uppercase; letter-spacing: .15px; }
   .ss-login .ss-status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ss-accent); }
   .ss-login .ss-intro h1 { margin-top: 17px; font-size: clamp(32px, 2.45vw, 42px); line-height: 1.2; font-weight: 650; letter-spacing: -1.25px; }
   .ss-login .ss-intro-description { margin-top: 17px; color: var(--ss-muted); font-size: 13px; line-height: 1.8; }
-  .ss-login .ss-auth-card { margin-top: 34px; padding: 32px; background: var(--ss-panel); border: 1px solid var(--ss-line); border-radius: 9px; box-shadow: 0 20px 65px #0000001a; }
-  .ss-login .ss-card-heading { display: flex; align-items: center; gap: 12px; padding-bottom: 24px; margin-bottom: 28px; border-bottom: 1px solid var(--ss-line); }
+  .ss-login .ss-auth-card { margin-top: clamp(14px, 3.5vh, 34px); padding: clamp(16px, 3.2vh, 32px); background: var(--ss-panel); border: 1px solid var(--ss-line); border-radius: 9px; box-shadow: 0 20px 65px #0000001a; }
+  .ss-login .ss-card-heading { display: flex; align-items: center; gap: 12px; padding-bottom: clamp(10px, 2.5vh, 24px); margin-bottom: clamp(12px, 2.8vh, 28px); border-bottom: 1px solid var(--ss-line); }
   .ss-login .ss-card-icon { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 7px; border: 1px solid #15454b; color: var(--ss-accent); background: #092127; }
   .ss-login .ss-card-heading h2 { font-size: 14px; font-weight: 650; line-height: 1.5; letter-spacing: -.15px; }
   .ss-login .ss-card-heading p { margin-top: 2px; font-size: 12px; line-height: 1.6; color: var(--ss-muted); }
-  .ss-login .ss-field + .ss-field { margin-top: 20px; }
+  .ss-login .ss-field + .ss-field { margin-top: clamp(10px, 2.2vh, 20px); }
   .ss-login .ss-field label { display: block; margin-bottom: 8px; color: var(--ss-text); font-size: 12px; font-weight: 550; }
   .ss-login .ss-input-wrap { position: relative; }
   .ss-login .ss-input-icon { position: absolute; top: 50%; left: 13px; transform: translateY(-50%); color: #8ba0aa; pointer-events: none; }
@@ -567,11 +567,11 @@ const styles = `
   .ss-login .ss-input-wrap--password input { padding-right: 46px; }
   .ss-login .ss-password-toggle { position: absolute; top: 1px; right: 1px; display: grid; place-items: center; width: 43px; height: 43px; padding: 0; border: 0; border-radius: 6px; color: #8ba0aa; background: transparent; }
   .ss-login .ss-password-toggle:hover { color: var(--ss-accent); }
-  .ss-login .ss-submit { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 45px; margin-top: 24px; padding: 11px 16px; border: 1px solid transparent; border-radius: 7px; background: var(--ss-accent); color: #032125; font-size: 13px; font-weight: 650; line-height: 1.5; transition: background .18s, transform .18s; }
+  .ss-login .ss-submit { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 45px; margin-top: clamp(12px, 2.6vh, 24px); padding: 11px 16px; border: 1px solid transparent; border-radius: 7px; background: var(--ss-accent); color: #032125; font-size: 13px; font-weight: 650; line-height: 1.5; transition: background .18s, transform .18s; }
   .ss-login .ss-submit:hover:not(:disabled) { background: #55e5d7; }
   .ss-login .ss-submit:active:not(:disabled) { transform: translateY(1px); }
-  .ss-login .ss-account-help { margin-top: 24px; text-align: center; color: var(--ss-muted); font-size: 12px; line-height: 1.8; }
-  .ss-login .ss-bootstrap { margin-top: 18px; }
+  .ss-login .ss-account-help { margin-top: clamp(12px, 2.6vh, 24px); text-align: center; color: var(--ss-muted); font-size: 12px; line-height: 1.8; }
+  .ss-login .ss-bootstrap { margin-top: clamp(8px, 2vh, 18px); }
   .ss-login .ss-bootstrap-toggle { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; min-height: 40px; padding: 6px 4px; border: 0; border-radius: 5px; color: var(--ss-muted); background: transparent; font-size: 11.5px; line-height: 1.6; text-align: center; }
   .ss-login .ss-bootstrap-toggle:hover { color: var(--ss-accent); }
   .ss-login .ss-bootstrap-panel { overflow: hidden; }

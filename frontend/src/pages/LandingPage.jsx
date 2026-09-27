@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Canvas } from "@react-three/fiber";
-import { Stars, OrbitControls } from "@react-three/drei";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   FileText,
   Brain,
   ShieldCheck,
-  Sparkles
+  Sparkles,
+  Cpu                     
 } from "lucide-react";
 
-import NeuralGraph from "../components/three/NeuralGraph";
+import HeroGalaxy from "../components/three/HeroGalaxy";       // ✅ sirf hero galaxy
+import HeroBlob from "../components/three/HeroBlob";           // ✅ blob + tool image
+import Sprinkles from "../components/three/Sprinkles";         // ✅ validation section sprinkles
 import useReveal from "../hooks/useReveal";
 import "./LandingPage.css";
 
@@ -30,18 +30,20 @@ return (
 <nav className="ss-nav">
 
 
-<div className="ss-logo">
+<Link to="/" className="ss-logo">
 
-<div className="ss-logo-icon">
-✦
-</div>
+  <div className="ss-logo-icon">
+    <Cpu size={18} />
+  </div>
 
-<span>
-SkillSprint
-<b>AI</b>
-</span>
+  <div className="ss-logo-text">
+    <span className="ss-logo-title">
+      SkillSprint <b>AI</b>
+    </span>
+  
+  </div>
 
-</div>
+</Link>
 
 
 
@@ -99,175 +101,57 @@ Try Now
 
 {/* HERO */}
 
-
 <section className="ss-hero">
 
-
-<div className="ss-hero-content reveal">
-
-
-<div className="ss-badge">
-
-<Sparkles size={14}/>
-
-GENERATIVE AI POWERED
-
-</div>
-
-
-
-<h1>
-
-Transform company
-<br/>
-
-knowledge into
-<br/>
-
-<span>
-intelligent onboarding
-</span>
-
-</h1>
-
-
-
-<p>
-
-SkillSprint AI analyzes company
-documents, policies, SOPs and
-role requirements to create
-personalized employee learning
-experiences.
-
-</p>
-
-
-
-<div className="ss-actions">
-
-
-<Link
-to="/login"
-className="main-btn"
->
-
-Start Building
-
-<ArrowRight size={18}/>
-
-</Link>
-
-
-
-<Link
-to="/login"
-className="border-btn"
->
-
-Login
-
-</Link>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div className="ss-webgl">
-
-
-<Canvas
-camera={{
-position:[0,0,5]
-}}
->
-
-
-<ambientLight
-intensity={1}
-/>
-
-
-<pointLight
-position={[3,3,3]}
-color="#2dd4c5"
-/>
-
-
-<NeuralGraph/>
-
-
-<Stars
-radius={50}
-depth={30}
-count={4000}
-factor={3}
-/>
-
-
-<OrbitControls
-enableZoom={false}
-/>
-
-
-</Canvas>
-
-
-
-{/* FLOATING UI */}
-
-
-<div className="float-card document-card">
-
-
-<span>
-SOURCE
-</span>
-
-Company Policy.pdf
-
-</div>
-
-
-
-
-<div className="float-card ai-card">
-
-
-<span>
-AI GENERATED
-</span>
-
-Learning Plan
-
-</div>
-
-
-
-
-<div className="float-card verify-card">
-
-
-<span>
-STATUS
-</span>
-
-✓ Verified
-
-</div>
-
-
-
-</div>
-
-
+  {/* Sprinkles — validation section jaisa */}
+  <div className="hero-bg">
+    <Sprinkles count={110} radius={140} />
+  </div>
+
+  <div className="ss-hero-content reveal">
+
+    <div className="ss-badge">
+      <Sparkles size={14}/>
+      GENERATIVE AI POWERED
+    </div>
+
+    <h1>
+      Transform company
+      <br/>
+      knowledge into
+      <br/>
+      <span>
+        intelligent onboarding
+      </span>
+    </h1>
+
+    <p>
+      SkillSprint AI analyzes company
+      documents, policies, SOPs and
+      role requirements to create
+      personalized employee learning
+      experiences.
+    </p>
+
+    <div className="ss-actions">
+
+      <Link to="/login" className="main-btn">
+        Start Building
+        <ArrowRight size={18}/>
+      </Link>
+
+      <Link to="/login" className="border-btn">
+        Login
+      </Link>
+
+    </div>
+
+  </div>
+
+  {/* Right side — blob with human + 3 floating cards */}
+  <div className="ss-hero-visual">
+    <HeroBlob />
+  </div>
 
 </section>
 
@@ -510,6 +394,7 @@ Coverage
 </div>
 
 
+
 </div>
 
 
@@ -526,72 +411,75 @@ Coverage
 
 {/* VALIDATION */}
 
-
-
 <section
 id="validation"
 className="validation-section reveal"
 >
 
+  <div className="validation-bg">
+    <Sprinkles count={90} radius={150} />
+  </div>
 
-<div className="validation-core">
+  <div className="validation-content">
 
-<ShieldCheck size={70}/>
+    <div className="validation-core">
 
-</div>
+      <ShieldCheck size={70}/>
 
-
-
-<h2>
-
-Generative AI
-<br/>
-
-+
-<br/>
-
-Python Validation
-
-</h2>
+    </div>
 
 
 
-<p>
+    <h2>
 
-Ensure every generated learning plan
-is traceable, complete and aligned
-with company requirements.
+      Generative AI
+      <br/>
 
-</p>
+      +
+      <br/>
 
+      Python Validation
 
-
-<div className="validation-list">
-
-
-<span>
-Requirement Coverage
-</span>
+    </h2>
 
 
-<span>
-Source Traceability
-</span>
+
+    <p>
+
+      Ensure every generated learning plan
+      is traceable, complete and aligned
+      with company requirements.
+
+    </p>
 
 
-<span>
-Conflict Detection
-</span>
+
+    <div className="validation-list">
 
 
-<span>
-Quality Verification
-</span>
+      <span>
+        Requirement Coverage
+      </span>
 
 
-</div>
+      <span>
+        Source Traceability
+      </span>
 
 
+      <span>
+        Conflict Detection
+      </span>
+
+
+      <span>
+        Quality Verification
+      </span>
+
+
+    </div>
+
+  </div>
 
 </section>
 
@@ -605,43 +493,69 @@ Quality Verification
 
 {/* CTA */}
 
-
-
 <section className="ss-final reveal">
 
+  <h2>
+    Build the future of
+    employee onboarding.
+  </h2>
 
-<h2>
+  <p>
+    SkillSprint AI turns company knowledge
+    into actionable learning experiences.
+  </p>
 
-Build the future of
-employee onboarding.
-
-</h2>
-
-
-<p>
-
-SkillSprint AI turns company knowledge
-into actionable learning experiences.
-
-</p>
-
-
-<Link
-to="/login"
->
-
-Get Started
-
-<ArrowRight size={18}/>
-
-</Link>
-
+  <Link to="/login">
+    Get Started
+    <ArrowRight size={18}/>
+  </Link>
 
 </section>
 
+{/* FOOTER */}
 
+<footer className="ss-footer">
 
+  <div className="ss-footer-inner">
 
+    <div className="ss-footer-left">
+
+<div className="ss-footer-logo">
+
+  <div className="ss-logo-icon">
+    <Cpu size={16} />
+  </div>
+
+  <div className="ss-logo-text">
+    <span className="ss-logo-title">
+      SkillSprint <b>AI</b>
+    </span>
+  </div>
+
+</div>
+
+      <p className="ss-footer-tag">
+        Generative AI powered onboarding.
+      </p>
+
+    </div>
+
+    <div className="ss-footer-links">
+
+      <a href="#process">Process</a>
+      <a href="#ai">AI Engine</a>
+      <a href="#validation">Validation</a>
+      <a href="#features">Features</a>
+
+    </div>
+
+    <div className="ss-footer-right">
+      <span>© {new Date().getFullYear()} SkillSprint AI</span>
+    </div>
+
+  </div>
+
+</footer>
 
 </div>
 
@@ -649,3 +563,8 @@ Get Started
 
 
 }
+
+
+
+
+

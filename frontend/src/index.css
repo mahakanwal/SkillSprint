@@ -315,38 +315,3 @@
   100% { background-position: 0 50%; }
 }
 
-.ss-login {
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-}
-
-
-.ss-login .ss-auth-side {
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-}
-
-
-.ss-login .ss-auth-content {
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  scrollbar-width: none;
-}
-
-
-.ss-login .ss-auth-content::-webkit-scrollbar {
-  display: none;
-}
-
-
-.ss-login .ss-showcase {
-  height: 100vh;
-  height: 100dvh;
-  overflow: hidden;
-}
-.ss-login .ss-auth-content {
-  transform: scale(.96);
-  transform-origin: center;
-}
