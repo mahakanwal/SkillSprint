@@ -5,6 +5,16 @@ FastAPI application entry point for SkillSprint AI.
 
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://skill-sprint-omega-six.vercel.app/",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 from database.connection import init_db
 
