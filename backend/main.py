@@ -22,6 +22,10 @@ from routers import (
 )
 from security.rbac import require_roles, get_current_user
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Applied at the router level. Three tiers:
 #   _admin_only        -- documents/roles/requirements: only admin/training_manager
 #                          create or touch these (source content + ground truth).

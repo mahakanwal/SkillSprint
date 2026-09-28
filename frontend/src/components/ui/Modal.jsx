@@ -15,21 +15,37 @@ export const Modal = ({ open, onClose, title, subtitle, icon: Icon, size = 'lg',
   const panelRef = useRef(null);
   const titleId = useId();
 
+  // Keep the latest onClose in a ref instead of listing it as an effect
+  // dependency. Parents usually pass an inline arrow (onClose={() => ...}),
+  // which is a brand-new function on every render. With onClose in the
+  // dependency array, every keystroke in a form inside the modal (form state
+  // lives in the parent -> parent re-renders -> new onClose) re-ran this
+  // effect: its cleanup moved focus back to the trigger button, and the new
+  // run moved focus to the dialog panel -- so the input lost focus after
+  // every single character. The effect now only depends on `open`.
+  const onCloseRef = useRef(onClose);
+  useEffect(() => { onCloseRef.current = onClose; }, [onClose]);
+
   useEffect(() => {
     if (!open) return undefined;
     const previouslyFocused = document.activeElement;
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e) => { if (e.key === 'Escape') onCloseRef.current?.(); };
     const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', onKey);
-    const t = setTimeout(() => panelRef.current?.focus(), 30);
+    const t = setTimeout(() => {
+      // only move focus into the dialog if it isn't already inside it
+      if (panelRef.current && !panelRef.current.contains(document.activeElement)) {
+        panelRef.current.focus();
+      }
+    }, 30);
     return () => {
       clearTimeout(t);
       document.body.style.overflow = prevOverflow;
       window.removeEventListener('keydown', onKey);
       if (previouslyFocused && typeof previouslyFocused.focus === 'function') previouslyFocused.focus();
     };
-  }, [open, onClose]);
+  }, [open]);
 
   const width = size === 'sm' ? 'max-w-md' : size === 'xl' ? 'max-w-4xl' : 'max-w-3xl';
 
