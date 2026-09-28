@@ -1,18 +1,23 @@
+import axios from "axios";
+
 const TOKEN_KEY = "skillsprint_token";
 
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
 });
 
-apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem(TOKEN_KEY);
+apiClient.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem(TOKEN_KEY);
 
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
 
-  return config;
-});
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 apiClient.interceptors.response.use(
   (response) => response,
