@@ -5,16 +5,7 @@ FastAPI application entry point for SkillSprint AI.
 
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://skill-sprint-omega-six.vercel.app/",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+from dotenv import load_dotenv
 
 from database.connection import init_db
 
@@ -30,44 +21,11 @@ from routers import (
     dashboard_router,
     report_router,
 )
+
 from security.rbac import require_roles, get_current_user
 
-from dotenv import load_dotenv
 
 load_dotenv()
-
-# Applied at the router level. Three tiers:
-#   _admin_only        -- documents/roles/requirements: only admin/training_manager
-#                          create or touch these (source content + ground truth).
-#   _onboarding_access -- onboarding: any logged-in user, because an EMPLOYEE
-#                          must be able to read their own generated plan
-#                          (GET /onboarding/plan/{employee_id}), and
-#                          reviewers/managers also need read access here.
-#                          NOTE: this means onboarding_router's internal
-#                          routes are the real boundary for write actions
-#                          (e.g. POST /onboarding/generate/{id}) -- if that
-#                          file doesn't already restrict generation to
-#                          admin/training_manager internally, add
-#                          Depends(require_roles("admin","training_manager"))
-#                          on that specific route.
-#   _validation_access -- validation: admin/training_manager (who fix issues)
-#                          plus reviewer/manager (who read the audit trail).
-# employee_router is deliberately NOT included here: it manages narrower
-# per-route access itself (any logged-in user can read, only
-# admin/training_manager can create/delete).
-_admin_only = [Depends(require_roles("admin", "training_manager"))]
-_onboarding_access = [Depends(get_current_user)]
-_validation_access = [Depends(require_roles("admin", "training_manager", "reviewer", "manager"))]
-# review: only the roles allowed to actually make/override decisions.
-# (manager is deliberately excluded -- they can SEE validation detail via
-# _validation_access above, but approving/rejecting/overriding plans is a
-# training_manager/reviewer/admin action, not a people-manager one.)
-_review_access = [Depends(require_roles("admin", "training_manager", "reviewer"))]
-# dashboards + reports: staff who oversee onboarding (not employees)
-_reporting_access = [Depends(require_roles("admin", "training_manager", "reviewer", "manager"))]
-
-
-
 
 
 app = FastAPI(
@@ -77,18 +35,61 @@ app = FastAPI(
 )
 
 
-# Allow React frontend (localhost:5173 for Vite) to call this API
+# CORS Configuration
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # tighten this to specific origin before production
+    allow_origins=[
+        "http://localhost:5173",
+        "https://skill-sprint-omega-six.vercel.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
+_admin_only = [
+    Depends(require_roles("admin", "training_manager"))
+]
 
-# Register routers
+_onboarding_access = [
+    Depends(get_current_user)
+]
+
+_validation_access = [
+    Depends(
+        require_roles(
+            "admin",
+            "training_manager",
+            "reviewer",
+            "manager"
+        )
+    )
+]
+
+_review_access = [
+    Depends(
+        require_roles(
+            "admin",
+            "training_manager",
+            "reviewer"
+        )
+    )
+]
+
+_reporting_access = [
+    Depends(
+        require_roles(
+            "admin",
+            "training_manager",
+            "reviewer",
+            "manager"
+        )
+    )
+]
+
+
+# Register Routers
 
 app.include_router(
     document_router.router,
@@ -109,7 +110,7 @@ app.include_router(
 app.include_router(
     employee_router.router,
     prefix="/employees",
-    tags=["Employees"]
+    tags=["Employees"],
 )
 
 
@@ -129,8 +130,6 @@ app.include_router(
 )
 
 
-# NEW: Validation Pipeline
-
 app.include_router(
     validation_router.router,
     prefix="/validation",
@@ -138,13 +137,13 @@ app.include_router(
     dependencies=_validation_access,
 )
 
+
 app.include_router(
     auth_router.router,
     prefix="/auth",
     tags=["Authentication"],
 )
 
-# NEW: Reviewer Decision + Audit Trail
 
 app.include_router(
     review_router.router,
@@ -153,7 +152,6 @@ app.include_router(
     dependencies=_review_access,
 )
 
-# NEW: Dashboards (SRS 51-52, 60-61) + Reports/Export (SRS 62-63)
 
 app.include_router(
     dashboard_router.router,
@@ -162,6 +160,7 @@ app.include_router(
     dependencies=_reporting_access,
 )
 
+
 app.include_router(
     report_router.router,
     prefix="/reports",
@@ -169,9 +168,9 @@ app.include_router(
     dependencies=_reporting_access,
 )
 
+
 @app.on_event("startup")
 def on_startup():
-
     init_db()
 
     print(
@@ -179,10 +178,8 @@ def on_startup():
     )
 
 
-
 @app.get("/")
 def root():
-
     return {
         "status": "SkillSprint AI backend is running"
     }
